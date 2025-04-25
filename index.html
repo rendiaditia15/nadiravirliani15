@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Nadira</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffe6f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+    h1 {
+      color: #ff69b4;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out 0.5s forwards;
+    }
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      margin: 10px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 1s forwards;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 1.5s forwards;
+    }
+    #gallery {
+      display: none;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+    .photo {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border-radius: 10px;
+      object-fit: cover;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 1s forwards;
+    }
+    .love-note {
+      font-style: italic;
+      color: #d63384;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container" id="login-form">
+    <h1>Hai Nadira Virliani</h1>
+    <p>Masukkan nama dan password dulu ya!</p>
+    <input type="text" id="username" placeholder="Nama">
+    <input type="password" id="password" placeholder="Password">
+    <br>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="container" id="gallery">
+    <h1>Bidadariku:3</h1>
+    <p>Selamat Datang, Sayangg!!</p>
+    <div class="love-note">
+      "Haii cantikk, maaf yaa kemarin aku cuekinn kamuu :("
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <img src="nanad3.jpg" class="photo"> <!-- Pastikan foto ada di folder yang sama -->
+      <img src="nanad1.jpg" class="photo">
+      <img src="nanad2.jpg" class="photo">
+    </div>
+    <audio controls autoplay loop style="margin-top: 20px;">
+      <source src="https://archive.org/download/AndraAndTheBackboneSempurna_201811/Andra%20And%20The%20Backbone%20-%20Sempurna.mp3" type="audio/mpeg">
+      Lagu tidak bisa diputar di browser ini.
+    </audio>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById('username').value.toLowerCase();
+      const password = document.getElementById('password').value.toLowerCase();
+
+      if (username === 'nadira' && password === 'cantik15') {
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('gallery').style.display = 'block';
+      } else {
+        alert('Nama atau password salah, coba lagi ya!');
+      }
+    }
+  </script>
+</body>
+</html>
